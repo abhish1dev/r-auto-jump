@@ -1,0 +1,65 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#1e1e1e" stroke="#61dafb" stroke-width="3"/>
+  
+  <!-- Merge conflict markers (decorative background) -->
+  <g opacity="0.15">
+    <text x="8" y="30" font-family="monospace" font-size="14" fill="#888">
+      &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+    </text>
+    <text x="8" y="98" font-family="monospace" font-size="14" fill="#888">
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt;
+    </text>
+  </g>
+  
+  <!-- Lightning bolt (main icon - representing auto-jump) -->
+  <path d="M 64 20 L 50 55 L 65 55 L 55 85 L 80 50 L 65 50 Z" 
+        fill="#ffd700" 
+        stroke="#ff8c00" 
+        stroke-width="2" 
+        stroke-linejoin="round"/>
+  
+  <!-- Arrow pointing down (navigation) -->
+  <path d="M 64 85 L 64 108" 
+        stroke="#61dafb" 
+        stroke-width="4" 
+        stroke-linecap="round"/>
+  <path d="M 55 100 L 64 108 L 73 100" 
+        stroke="#61dafb" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+  
+  <!-- Small arrows indicating movement/jumping -->
+  <g opacity="0.8">
+    <path d="M 85 40 L 92 40 L 88 36" 
+          stroke="#ffd700" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+    <path d="M 85 50 L 92 50 L 88 46" 
+          stroke="#ffd700" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+    <path d="M 85 60 L 92 60 L 88 56" 
+          stroke="#ffd700" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+  </g>
+  
+  <!-- Glow effect around lightning -->
+  <circle cx="64" cy="50" r="32" fill="url(#glow)" opacity="0.3"/>
+  
+  <defs>
+    <radialGradient id="glow">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+</svg>
