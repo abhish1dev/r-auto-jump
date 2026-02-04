@@ -1,0 +1,17 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.eslintrc.json
+**/*.map
+**/*.ts
+tsconfig.json
+node_modules/**
+*.vsix
+.git/**
+.github/**
+PUBLISHING.md
+images/README.md
+.vscode/
+test/**
+.editorconfig

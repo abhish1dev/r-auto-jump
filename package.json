@@ -1,0 +1,139 @@
+{
+  "name": "r-auto-jump",
+  "displayName": "R Auto Jump - Merge Conflict Navigator",
+  "description": "Automatically jump to the next unresolved merge conflict and navigate between conflicted files with smart auto-jump after resolution",
+  "version": "0.1.0",
+  "publisher": "abhish1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "SCM Providers"
+  ],
+  "icon": "images/icon.png",
+  "keywords": [
+    "merge",
+    "conflict",
+    "git",
+    "navigation",
+    "auto-jump"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "r-auto-jump.jumpToNextConflict",
+        "title": "Jump to Next Conflict",
+        "category": "R Auto Jump"
+      },
+      {
+        "command": "r-auto-jump.jumpToPreviousConflict",
+        "title": "Jump to Previous Conflict",
+        "category": "R Auto Jump"
+      },
+      {
+        "command": "r-auto-jump.openNextConflictedFile",
+        "title": "Open Next Conflicted File",
+        "category": "R Auto Jump"
+      },
+      {
+        "command": "r-auto-jump.showConflictStatus",
+        "title": "Show Conflict Status",
+        "category": "R Auto Jump"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "r-auto-jump.jumpToNextConflict",
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "r-auto-jump.jumpToPreviousConflict",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "R Auto Jump",
+      "properties": {
+        "r-auto-jump.autoJumpEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically jump to the next conflict after resolving the current one"
+        },
+        "r-auto-jump.autoJumpDelay": {
+          "type": "number",
+          "default": 2000,
+          "minimum": 500,
+          "maximum": 10000,
+          "description": "Delay in milliseconds before auto-jumping to the next conflict (default: 2000ms)"
+        },
+        "r-auto-jump.autoOpenNextFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically open the next conflicted file when the current file is fully resolved"
+        },
+        "r-auto-jump.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show conflict count in the status bar"
+        },
+        "r-auto-jump.conflictMarkers": {
+          "type": "object",
+          "default": {
+            "start": "<<<<<<<",
+            "middle": "=======",
+            "end": ">>>>>>>"
+          },
+          "description": "Custom conflict markers to detect"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.30",
+    "@types/vscode": "^1.108.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^2.32.0",
+    "eslint": "^8.57.1",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/r-auto-jump.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/r-auto-jump/issues"
+  },
+  "homepage": "https://github.com/your-username/r-auto-jump#readme",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "badges": [],
+  "qna": "marketplace"
+}
