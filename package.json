@@ -119,17 +119,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/r-auto-jump.git"
+    "url": "https://github.com/abhish1dev/r-auto-jump.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Your Name",
-    "email": "your.email@example.com"
+    "name": "Abhishek Gangrade",
+    "email": "abhishekgangrade92@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/your-username/r-auto-jump/issues"
+    "url": "https://github.com/abhish1dev/r-auto-jump/issues"
   },
-  "homepage": "https://github.com/your-username/r-auto-jump#readme",
+  "homepage": "https://github.com/abhish1dev/r-auto-jump#readme",
   "galleryBanner": {
     "color": "#1e1e1e",
     "theme": "dark"
